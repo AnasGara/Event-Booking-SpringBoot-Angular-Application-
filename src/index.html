@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>EventBooking</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link href='../../../assets/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+  <link href="../../../assets/css/style.css" rel="stylesheet">
+  <link href="../../../assets/css/jquery-steps.css" rel="stylesheet">
+  <!-- <link href="../../../assets/css/datepicker.min.css" rel="stylesheet"> -->
+
+  <link href="../../../assets/css/night-mode.css" rel="stylesheet">
+  <link href="../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <link href="../../../assets/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+  <link href="../../../assets/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+
+  <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/ckeditor5/sample/css/sample.css" rel="stylesheet">
+  <link href="../../../assets/css/responsive.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <app-root></app-root>
+
+  <script src="../../../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../../../assets/js/jquery-steps.min.js"></script>
+
+  <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="../../../assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script> -->
+
+  <script src="../../../assets/vendor/OwlCarousel/owl.carousel.js"></script>
+  <script src="../../../assets/vendor/ckeditor5/ckeditor.js"></script>
+
+  <!-- <script src="../../../assets/js/custom.js"></script> -->
+  <!-- <script src="../../../assets/js/timer.js"></script> -->
+
+  <script src="../../../assets/js/night-mode.js"></script>
+  <script src="../../../assets/js/jquery-steps.min.js"></script>
+  <!-- <script src="../../../assets/vendor/mixitup/dist/mixitup.min.js"></script> -->
+  <!-- <script src="../../../assets/js/datepicker.min.js"></script>
+  <script src="../../../assets/js/i18n/datepicker.en.js"></script>
+ -->
+
+  <!-- <script>
+    var containerEl = document.querySelector('[data-ref~="event-filter-content"]');
+
+    var mixer = mixitup(containerEl, {
+      selectors: {
+        target: '[data-ref~="mixitup-target"]'
+      }
+    });
+
+  </script> -->
+  <script>
+    $('#add-event-tab').steps({
+      onFinish: function () {
+        alert('Wizard Completed');
+      }
+    });		
+  </script>
+  <!-- <script>
+    ClassicEditor
+      .create(document.querySelector('#pd_editor'), {
+        // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+      })
+      .then(editor => {
+        window.editor = editor;
+      })
+      .catch(err => {
+        console.error(err.stack);
+      });
+  </script> -->
+</body>
+
+</html>

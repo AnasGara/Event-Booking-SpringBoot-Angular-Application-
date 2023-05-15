@@ -1,0 +1,104 @@
+<app-navbar></app-navbar>
+
+
+<div class="wrapper">
+
+    <div class="event-dt-block p-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="event-top-dts">
+                        <div class="event-top-date">
+                            <span class="event-month">{{month}}</span>
+                            <span class="event-date">{{day}}</span>
+                        </div>
+                        <div class="event-top-dt">
+                            <h3 class="event-main-title">{{event.name}} {{event.date}} at {{event.time}}</h3>
+                            <div class="event-top-info-status">
+                                <span class="event-type-name"><i class="fa-solid fa-location-dot"></i>Venue
+                                    Event</span>
+                                <span class="event-type-name details-hr">Starts on <span
+                                        class="ev-event-date">{{event.date}} at {{event.time}}</span></span>
+                                <span class="event-type-name details-hr">{{event.duration}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-7 col-md-12">
+                    <div class="main-event-dt">
+                        <div class="event-img">
+                            <img [src]="event.banner" alt="">
+                        </div>
+
+                        <div class="main-event-content">
+                            <h4>About This Event</h4>
+                            <p>{{event.description}}</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-12">
+                    <div class="main-card event-right-dt">
+                        <div class="bp-title">
+                            <h4>Event Details</h4>
+                        </div>
+
+                        <div class="event-dt-right-group mt-5">
+                            <div class="event-dt-right-icon">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </div>
+                            <div class="event-dt-right-content">
+                                <h4>Organised by</h4>
+                                <h5>{{event.organizer?.firstName}} {{event.organizer?.lastName}}</h5>
+                            </div>
+                        </div>
+                        <div class="event-dt-right-group">
+                            <div class="event-dt-right-icon">
+                                <i class="fa-solid fa-calendar-day"></i>
+                            </div>
+                            <div class="event-dt-right-content">
+                                <h4>Date and Time</h4>
+                                <h5>{{event.date}} {{event.time}}</h5>
+
+                            </div>
+                        </div>
+                        <div class="event-dt-right-group">
+                            <div class="event-dt-right-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="event-dt-right-content">
+                                <h4>Location</h4>
+                                <h5 class="mb-0">{{event.venue?.address}}, {{event.venue?.city}},
+                                    {{event.venue?.state}} {{event.venue?.country}}
+
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="select-tickets-block">
+                            <h6>Ticket Price</h6>
+                            <div class="x-title">1x Ticket(s)</div>
+                            <h4>USD <span>${{event.price}}</span></h4>
+                        </div>
+                        <div class="booking-btn" *ngIf="role!='organizer'">
+                            <a *ngIf="token!=null" routerLink="/booking/{{event.id}}"
+                                class="main-btn btn-hover w-100">Book Now</a>
+                            <a *ngIf="token==null" routerLink="/signinuser" class="main-btn btn-hover w-100">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="more-events">
+                        <div class="main-title position-relative">
+                            <h3>More Events</h3>
+                            <a routerLink="/events" class="view-all-link">Browse All<i
+                                    class="fa-solid fa-right-long ms-2"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

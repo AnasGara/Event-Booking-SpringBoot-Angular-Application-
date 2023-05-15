@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<div class="wrapper">
+
+    <div class="event-dt-block p-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-7 col-md-10">
+                    <div class="booking-confirmed-content">
+                        <div class="main-card">
+                            <div class="booking-confirmed-top text-center p_30">
+                                <div class="booking-confirmed-img mt-4">
+                                    <img src="../../assets/images/confirmed.png" alt="">
+                                </div>
+                                <h4>Booking Confirmed</h4>
+                                <p class="ps-lg-4 pe-lg-4">We are pleased to inform you that your reservation
+                                    request has been received and confirmed.</p>
+
+                            </div>
+                            <div class="booking-confirmed-bottom">
+                                <div class="booking-confirmed-bottom-bg p_30">
+                                    <div class="event-order-dt">
+                                        <div class="event-thumbnail-img">
+                                            <img src="../../assets/images/event-imgs/img-7.jpg" alt="">
+                                        </div>
+                                        <div class="event-order-dt-content">
+                                            <h5>{{event.name}}</h5>
+                                            <span>{{event.date}} {{event.time}}. Duration {{event.duration}}</span>
+                                            <div class="buyer-name">{{user.firstName}} {{user.lastName}}</div>
+                                            <div class="booking-total-tickets">
+                                                <i class="fa-solid fa-ticket rotate-icon"></i>
+                                                <span class="booking-count-tickets mx-2">1</span>x Ticket
+                                            </div>
+                                            <div class="booking-total-grand">
+                                                Total : <span>$ {{event.price}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a routerLink="/invoice/{{event.id}}" class="main-btn btn-hover h_50 w-100 mt-5"><i
+                                            class="fa-solid fa-ticket rotate-icon me-3"></i>View Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

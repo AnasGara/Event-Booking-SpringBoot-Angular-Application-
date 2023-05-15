@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+    <div class="event-dt-block p-80">
+        <div class="container">
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-md-12" style="margin-bottom: 30px;">
+                    <div class="main-title text-center">
+                        <h3>Your events</h3>
+                    </div>
+                </div>
+                <div class="col-xl-16 col-lg-12 col-md-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr style="background-color: #6ac045; color: white;">
+                                <th>#</th>
+                                <th>Event Name</th>
+                                <th>Event category</th>
+                                <th>Event Date</th>
+                                <th>Event Time</th>
+                                <th>Event Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let event of lstevent">
+                                <td></td>
+                                <td><a routerLink="/eventdetail/{{event.id}}">{{event.name}}</a></td>
+                                <td>{{event.category}}</td>
+                                <td>{{event.date}}</td>
+                                <td>{{event.time}}</td>
+                                <td>${{event.price}}</td>
+                                <td><button (click)="deleteEvent(event.id!)" class="btn btn-danger">Delete</button></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

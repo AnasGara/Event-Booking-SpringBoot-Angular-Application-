@@ -1,0 +1,124 @@
+<div class="invoice clearfix">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="invoice-header justify-content-between">
+                    <div class="invoice-header-logo">
+                        <img src="../../assets/images/dark-logo.svg" alt="invoice-logo">
+                    </div>
+                    <div>
+                        <a (click)="downloadPDF()" class="download-link">Download</a>
+                    </div>
+                </div>
+                <div class="invoice-body" id="invoice">
+                    <div class="invoice_dts">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="invoice_title">Invoice</h2>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="vhls140">
+                                    <ul>
+                                        <li>
+                                            <div class="vdt-list">Invoice to {{user.firstName}} {{user.lastName}}</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">{{event.venue!.address}}</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">{{event.venue?.country}}, {{event.venue?.state}}</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">{{event.venue?.city}}, {{event.venue?.zipcode}}</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="vhls140">
+                                    <ul>
+                                        <li>
+                                            <div class="vdt-list">Invoice ID : YCCURW-000000</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">Order Date : {{this.eventUser.date}} </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-table bt_40">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Event Details</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Unit Price</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a routerLink="/eventdetail/{{event.id}}" target="_blank">{{event.name}}</a>
+                                        </td>
+                                        <td>Venue</td>
+                                        <td>1</td>
+                                        <td>${{event.price}}</td>
+                                        <td>${{event.price}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1"></td>
+                                        <td colspan="5">
+                                            <div class="user_dt_trans text-end pe-xl-4">
+                                                <div class="totalinv2">Invoice Total : USD ${{event.price}}</div>
+                                                <p>Paid via Paypal</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="invoice_footer">
+                        <div class="cut-line">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <div class="main-card">
+                            <div class="row g-0">
+                                <div class="col-lg-12">
+                                    <div class="event-order-dt p-4">
+                                        <div class="event-thumbnail-img">
+                                            <img src="../../assets/images/event-imgs/img-7.jpg" alt="">
+                                        </div>
+                                        <div class="event-order-dt-content">
+                                            <h5>{{event.name}}</h5>
+                                            <span>{{event.date}} {{event.time}}. Duration {{event.duration}}</span>
+                                            <div class="buyer-name">John Doe</div>
+                                            <div class="booking-total-tickets">
+                                                <i class="fa-solid fa-ticket rotate-icon"></i>
+                                                <span class="booking-count-tickets mx-2">1</span>x Ticket
+                                            </div>
+                                            <div class="booking-total-grand">
+                                                Total : <span>${{event.price}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="cut-line">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

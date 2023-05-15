@@ -1,0 +1,12 @@
+#price {
+    width: 80%;
+}
+
+#currency {
+    width: 20%;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+}

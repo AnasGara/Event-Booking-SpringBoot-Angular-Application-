@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+    <div class="hero-banner">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8 col-md-10">
+                    <div class="hero-banner-content">
+                        <h2>Discover Events For All The Things You Love</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="explore-events p-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="event-filter-items">
+                        <div class="featured-controls">
+
+                            <div class="controls">
+                                <button type="button" class="control" data-filter="all">All</button>
+                                <button type="button" class="control" data-filter=".arts">Arts</button>
+                                <button type="button" class="control" data-filter=".business">Business</button>
+                                <button type="button" class="control" data-filter=".concert">Concert</button>
+                                <button type="button" class="control" data-filter=".workshops">Workshops</button>
+                                <button type="button" class="control" data-filter=".coaching_consulting">Coaching
+                                    and Consulting</button>
+                                <button type="button" class="control" data-filter=".health_Wellness">Health and
+                                    Wellbeing</button>
+                                <button type="button" class="control" data-filter=".volunteer">Volunteer</button>
+                                <button type="button" class="control" data-filter=".sports">Sports</button>
+                                <button type="button" class="control" data-filter=".free">Free</button>
+                            </div>
+                            <div class="row" data-ref="event-filter-content">
+                                <div *ngFor="let event of events"
+                                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts concert workshops volunteer sports health_Wellness"
+                                    data-ref="mixitup-target">
+                                    <div class="main-card mt-4">
+                                        <div class="event-thumbnail">
+                                            <a routerLink="/eventdetail/{{event.id}}" class="thumbnail-img">
+                                                <img [src]="event.banner">
+                                            </a>
+                                            <span class="bookmark-icon" title="Bookmark"></span>
+                                        </div>
+                                        <div class="event-content">
+                                            <a routerLink="/eventdetail" class="event-title">{{event.name}}</a>
+                                            <div class="duration-price-remaining">
+                                                <span class="duration-price">USD ${{event.price}}</span>
+                                                <span class="remaining"></span>
+                                            </div>
+                                        </div>
+                                        <div class="event-footer">
+                                            <div class="event-timing">
+                                                <div class="publish-date">
+                                                    <span><i
+                                                            class="fa-solid fa-calendar-day me-2"></i>{{event.date}}</span>
+                                                    <span class="dot"><i class="fa-solid fa-circle"></i></span>
+                                                    <span>{{event.time}}</span>
+                                                </div>
+                                                <span class="publish-time"><i
+                                                        class="fa-solid fa-clock me-2"></i>{{event.duration}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="browse-btn">
+                                <a href="#" class="main-btn btn-hover ">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
