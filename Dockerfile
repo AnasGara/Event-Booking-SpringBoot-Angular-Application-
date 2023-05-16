@@ -1,7 +1,5 @@
 FROM node:16
 
-Run npm install -g npm@9.6.6
-
 WORKDIR /app
 
 COPY package.json .
