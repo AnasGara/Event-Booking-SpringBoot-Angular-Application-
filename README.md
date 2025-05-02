@@ -2,10 +2,10 @@
 
 This is the frontend application for the **Event Booking Platform**, built with **Angular**. It allows participants to browse and register for events, process payments using **Stripe**, and receive a unique access code for each booking.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AnasGara/Event-Booking-Angular)
-![GitHub stars](https://img.shields.io/github/stars/AnasGara/Event-Booking-Angular)
-![GitHub forks](https://img.shields.io/github/forks/AnasGara/Event-Booking-Angular)
-![GitHub license](https://img.shields.io/github/license/AnasGara/Event-Booking-Angular)
+![GitHub repo size](https://img.shields.io/github/repo-size/AnasGara/Event-Booking-SpringBoot-Angular-Application-)
+![GitHub stars](https://img.shields.io/github/stars/AnasGara/Event-Booking-SpringBoot-Angular-Application-)
+![GitHub forks](https://img.shields.io/github/forks/AnasGara/Event-Booking-SpringBoot-Angular-Application-)
+![GitHub license](https://img.shields.io/github/license/AnasGara/Event-Booking-SpringBoot-Angular-Application-)
 
 ---
 
